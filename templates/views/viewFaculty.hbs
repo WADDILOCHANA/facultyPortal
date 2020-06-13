@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin | View faculty</title>
+        <link rel="stylesheet" href="/css/adminMenuStyle.css">
+        <link rel="stylesheet" href="/css/adminViewFaculty.css">
+    </head>
+    <body>
+        {{>adminMenu}}
+        <div class="title" align="center">
+	        <table class="columns">
+			    <col style="width:25%">
+			    <col style="width:10%">
+			    <col style="width:15%">
+			    <col style="width:13%">
+			    <col style="width:13%">
+		        <tr>
+		            <th>Name of the Faculty</th>
+		            <th>Qualification</th>
+                    <th>Designation</th>
+                    <th>Department</th>
+                    <th>Date of joining</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+		    </table>
+		</div>
+        <div class="content">
+		    <div class="list">
+		        </br></br>
+                <table class="faculty">
+                    <col style="width:25%">
+                    <col style="width:10%">
+                    <col style="width:15%">
+                    <col style="width:13%">
+                    <col style="width:13%">
+                    {{#each facultys}}
+                        <tr>
+                            <td>{{ name }}</td>
+                            <td>{{qualification}}</td>
+                            <td>{{designation}}</td>
+                            <td>{{department}}</td>
+                            <td>{{date_Of_Joining}}</td>
+                            <td><form><button>edit</button></form></td>
+                            <td><form><button>Delete</button></form></td>
+                        </tr>
+                        
+                    {{/each}}
+			    </table>
+		    </div>
+ 	    </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script >
+        Handlebars.registerHelper('date_Of_Joining',function(){
+            return this.dateOfJoining
+        })
+    </script>
+</html>

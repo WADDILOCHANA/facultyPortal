@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clerk | Login</title>
+    </head>
+    <body>
+        <center>
+            <form action='/clerk' method="post">
+                <input type="text" placeholder="User name" id="name" name="name">
+                <input type="password" placeholder="Password" id="password" name="password">
+                <input type="submit" value="login">
+                {{error}}
+            </form>
+        </center>
+    </body>
+</html>

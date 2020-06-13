@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin | Add Faculty</title>
+        <link rel="stylesheet" href="/css/adminMenuStyle.css">
+    </head>
+    <body>
+        {{>adminMenu}}
+		<div>
+			<p id="message"></p>
+			<form id="form">
+				<div>
+                    <center>ADD NEW FACULTY</center>
+                </div>
+				<div>
+					<div>
+						<label>Name</label>
+						<input type="text" id="name" required><br/>
+					</div>
+					<div>
+						<label>Email</label>
+						<input type="email" id="email" required><br/>
+					</div>
+					<div>
+						<label>Designation</label>
+						<input type="text" id="desg" required><br/>
+					</div>
+					<div>
+						<label>Qualification</label>
+						<input type="text" id="qlfi" required><br/>
+					</div>
+					<div>
+						<label>Department</label>
+						<select  id="dep" required>
+							<option value=""><-Select Your Department-></option>
+							<option value="CSE">CSE</option>
+							<option value="IT">IT</option>
+							<option value="ECE">ECE</option>
+							<option value="EEE">EEE</option>
+							<option value="CIVIL">CIVIL</option>
+							<option value="MECH">MECH</option>
+						</select><br/>
+					</div>
+					<div>
+						<label>Date of Joining</label>
+						<input type="date" id="doj" required><br/>
+					</div>
+					<div>
+						<button>Submit</button>
+						<button type="reset">Reset</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+    <script src="/js/addFacultyDB.js"></script>
+</html>
+  

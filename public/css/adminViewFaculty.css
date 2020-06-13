@@ -1,0 +1,47 @@
+body{
+   margin:0px;
+}
+.content{
+   position:static;
+   margin-left:20%;    
+}
+.title{
+   position:fixed;
+   width:80%;
+}
+.list{
+   position:static;
+   width:100%;
+}  
+.columns{
+   border:4px;
+   font-size:23;
+   background-color:#73C6B6;
+   cellpadding:15px;
+   cellspacing:55px;
+   width:100%; 
+   border-collapse:collapse;
+   padding:5px;
+}
+th{
+   border:3px solid white;
+   margin-top:20px;
+}
+td{
+   border:1px solid black;
+   margin-top:60px;
+}
+.faculty{
+   border:4px;
+   font-size:23;
+   background-color:#D0ECE7;
+   border-collapse:collapse;
+   width:100%;
+   cellpadding:15px;
+   cellspacing:55px;
+   padding:3px;
+   text-align:center;
+}
+td{
+   height:20px;
+}
