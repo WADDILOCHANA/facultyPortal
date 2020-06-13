@@ -7,53 +7,24 @@
     </head>
     <body>
         {{>adminMenu}}
-        <div class="title" align="center">
-	        <table class="columns">
-			    <col style="width:25%">
-			    <col style="width:10%">
-			    <col style="width:15%">
-			    <col style="width:13%">
-			    <col style="width:13%">
-		        <tr>
-		            <th>Name of the Faculty</th>
-		            <th>Qualification</th>
-                    <th>Designation</th>
-                    <th>Department</th>
-                    <th>Date of joining</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-		    </table>
-		</div>
-        <div class="content">
-		    <div class="list">
-		        </br></br>
-                <table class="faculty">
-                    <col style="width:25%">
-                    <col style="width:10%">
-                    <col style="width:15%">
-                    <col style="width:13%">
-                    <col style="width:13%">
-                    {{#each facultys}}
-                        <tr>
-                            <td>{{ name }}</td>
-                            <td>{{qualification}}</td>
-                            <td>{{designation}}</td>
-                            <td>{{department}}</td>
-                            <td>{{date_Of_Joining}}</td>
-                            <td><form><button>edit</button></form></td>
-                            <td><form><button>Delete</button></form></td>
-                        </tr>
-                        
-                    {{/each}}
-			    </table>
-		    </div>
- 	    </div>
+        <script type="text/javascript">
+            document.write("<table>")
+            var slno=1
+                {{#each facultys}}
+                    document.write("<tr>")
+                        document.write("<td>"+slno+"</td>")
+                        document.write("<td>"+"{{name}}"+"</td>")
+                        document.write("<td>"+"{{email}}"+"</td>")
+                        document.write("<td>"+"{{designation}}"+"</td>")
+                        document.write("<td>"+"{{qualification}}"+"</td>")
+                        document.write("<td>"+"{{department}}"+"</td>")
+                        document.write("<td>"+"{{dateOfJoining}}".slice(4,15)+"</td>")
+                        document.write("<td>"+"<form id='edit'><input type='hidden' value='{{email}}'><button>edit</button></form>"+"</td>")
+                        document.write("<td>"+"<form id='edit'><input type='hidden' value='{{email}}'><button>delete</button></form>"+"</td>")
+                    document.write("</tr>")
+                    slno=slno+1
+                {{/each}}
+            document.write("</table>")
+        </script>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script >
-        Handlebars.registerHelper('date_Of_Joining',function(){
-            return this.dateOfJoining
-        })
-    </script>
 </html>
